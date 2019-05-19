@@ -1,0 +1,6 @@
+[submodule "themes/brutalist"]
+	path = themes/brutalist
+	url = https://github.com/mamcmanus/brutalist.git
+[submodule "pelican-plugins"]
+	path = pelican-plugins
+	url = https://github.com/getpelican/pelican-plugins

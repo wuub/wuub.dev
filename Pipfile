@@ -8,6 +8,15 @@ verify_ssl = true
 [packages]
 pelican = "*"
 markdown = "*"
+typogrify = "*"
+jinja2 = "*"
+pygments = "*"
+pelican-youtube = "*"
+webassets = "*"
+black = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
