@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "eba31b2480b8a1212cb4a916f208d1842b62ae10417cf755ec290caf711d4c98"
+            "sha256": "a741758c3ec2a5a90c2123bfcdb96fc77c68ca5f91d1d91a712f73109c5820de"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -113,6 +113,13 @@
                 "sha256:e249096428b3ae81b08327a63a485ad0878de3fb939049038579ac0ef61e17e7"
             ],
             "version": "==1.1.1"
+        },
+        "minchin-pelican-plugins-cname": {
+            "hashes": [
+                "sha256:d9d994709bd1db2fbd73510b6dfe66102ca527d28f7619d117101fad65da97a7"
+            ],
+            "index": "pypi",
+            "version": "==1.2.1"
         },
         "pelican": {
             "hashes": [

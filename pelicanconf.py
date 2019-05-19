@@ -14,6 +14,7 @@ TWITTER_USERNAME = "@wuub"
 FIRST_NAME = "wuub"
 MENUITEMS = [("tags", "/tags")]
 LOGO = "logo.png"
+FAVICON = "wrench.png"
 
 TIMEZONE = "Europe/Warsaw"
 DEFAULT_LANG = "en"
@@ -41,6 +42,7 @@ PLUGINS = [
     "liquid_tags.video",
     "liquid_tags.youtube",
     "liquid_tags.include_code",
+    "minchin.pelican.plugins.cname",
 ]
 
 SITEMAP = {"format": "txt"}

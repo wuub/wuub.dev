@@ -14,6 +14,7 @@ pygments = "*"
 pelican-youtube = "*"
 webassets = "*"
 black = "*"
+minchin-pelican-plugins-cname = "*"
 
 [requires]
 python_version = "3.7"
