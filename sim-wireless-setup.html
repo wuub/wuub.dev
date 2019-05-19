@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <title>wuub.dev blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <!-- twitter card metadata -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://en.gravatar.com/userimage/8800037/d6dd78792a9811a2f540a1328110a723.jpg?size=200">
+<meta name="twitter:site" content="@wuub">
+<meta name="twitter:title" content="Completely wireless setup for your drone racing simulator">
+<meta name="twitter:description" content="You want to play your favorite simulator using standard transmitter and goggles? USB and HDMI cables make everything feel heavy and constraint? This post is for you.">
+        <!-- OG Tags -->
+<meta property="og:url" content="https://wuub.dev/sim-wireless-setup.html"/>
+<meta property="og:title" content="wuub.dev blog | Completely wireless setup for your drone racing simulator" />
+<meta property="og:description" content="You want to play your favorite simulator using standard transmitter and goggles? USB and HDMI cables make everything feel heavy and constraint? This post is for you." />
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="https://wuub.dev/images/wrench.png">
+        <!-- moment.js for date formatting -->
+        <script src="https://wuub.dev/theme/js/moment.js"></script>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="https://wuub.dev/theme/css/main.css" />
+		<script>
+			
+                /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+    
+    (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+                
+                grunticon(["https://wuub.dev/theme/css/icons.data.svg.css", "https://wuub.dev/theme/css/icons.data.png.css", "https://wuub.dev/theme/css/icons.fallback.css"]);
+            </script>
+        <noscript><link href="https://wuub.dev/theme/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <!-- menu toggle javascript -->
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", initMenu);
+            
+            function initMenu(){
+                var menu = document.getElementById("menu");
+                var menulink = document.getElementById("menu-link");
+                menulink.addEventListener("click", function toggleMenu(){
+                        window.event.preventDefault();
+                        menulink.classList.toggle('active');
+                        menu.classList.toggle('active');              
+                    });
+            };
+        </script>
+
+    <meta name="description" content="You want to play your favorite simulator using standard transmitter and goggles? USB and HDMI cables make everything feel heavy and constraint? This post is for you." />
+
+    <meta name="tags" content="fpv" />
+    <meta name="tags" content="electronics" />
+
+</head>
+<body>
+    <div role="banner" id="masthead">
+        <header>
+            <a href="/"><img src="https://en.gravatar.com/userimage/8800037/d6dd78792a9811a2f540a1328110a723.jpg?size=200" alt="Matt McManus Avatar" class="gravatar"></a>
+            <a href="#menu" id="menu-link">more stuff</a>
+            <nav id="menu">
+                <ul>
+                        <li><a href="/tags">tags</a></li>
+                            <li class="active"><a href="https://wuub.dev/category/posts.html">posts</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+        <div class="page" role="main">
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2019-05-19 12:00:00+02:00">
+                <script>document.write(moment('2019-05-19 12:00:00+02:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            Completely wireless setup for your drone racing simulator
+          </h2>
+        </header>
+      <div class="content">
+         <p><img src="images/wireless-fpv/cover.jpg"></p>
+<h2>Simulators</h2>
+<p>There are several notable simulators on the market, namely <a href="https://www.velocidrone.com/">VelociDrone</a>,  <a href="https://thedroneracingleague.com/drl-sim-3/">DRL Sim</a> and <a href="https://www.liftoff-game.com/">Liftoff</a>.</p>
+<p>Setup described in this post is universal and works with all of them, but since Liftoff is my sim of choice
+I'll use it as an example :)</p>
+<h2>The Problem</h2>
+<p>We keep our gaming PC in the living room. It makes sense: 4K TV, surround sound, comfortable couch.  </p>
+<p>What doesn't make any sense is running <strong>5m+ USB cable</strong> from PC to the transmitter and a
+<strong>5m+ HDMI</strong> cable to the goggles to get an immersive simulator experience.</p>
+<p>With a few cheap components and basic soldering I was able to go completely wireless.
+Let me show you how.</p>
+<p>But first here's a <strong>Fatshark DVR</strong> of the finished product (keep in mind that video looks order of magnitude better 
+in the goggles during play)</p>
+<p><span class="videobox">
+                <iframe width="640" height="390"
+                    src='https://www.youtube.com/embed/7f8tGgE05uY'
+                    frameborder='0' webkitAllowFullScreen mozallowfullscreen
+                    allowFullScreen>
+                </iframe>
+            </span></p>
+<h2>Making the transmitter wireless [sic!]</h2>
+<p>Did you know that you can use your transmitter to control things over long distances
+without any wires? Shocking, right? :)  </p>
+<h3>off-the-shelf solution</h3>
+<p>With FrSky, the easiest way to ditch the USB cable is to just buy a <a href="https://www.frsky-rc.com/product/xsr-sim/">XSR-SIM</a>. 
+No firmware flashing, no soldering, printing enclosures, etc. Plug it into your PC, bind with a new model and fly. 
+It works just like any 2.4GHz D16 receiver on your quad. </p>
+<p><img src="images/wireless-fpv/dongle.jpg"></p>
+<p>It's a bit on the pricey side but performs flawlessly. Just make sure that your firmware versions match (FCC vs EU-LBT). </p>
+<h3>diy</h3>
+<p>Alternatively if you use FlySky/Spectrum or don't want to spend extra money and have a spare F4/F7 flight controller and unused receiver, you might be interested in using Betaflight's <a href="https://github.com/betaflight/betaflight/wiki/HID-Joystick-Support">USB HID joystick mode</a>.
+It can transform any receiver into USB joystick which can be used to fly a simulator. </p>
+<p>JB can show you <a href="https://www.youtube.com/watch?v=wuobzowLfj0">how</a> some flashing is required, but if you know how to configure
+Betaflight you'll be fine.</p>
+<h2>Making your goggles wireless [duh!]</h2>
+<p><img src="images/wireless-fpv/goggles.jpg"></p>
+<p>Surprisingly, your goggles are also capable of working without wires (can you notice the antennas) :) And just like in the case of 2.4GHz signal, there are two options. </p>
+<h3>off-the-shelf solution</h3>
+<p>You could probably buy something like <a href="https://www.getfpv.com/skyzone-tx-5d-5-8ghz-32ch-600mw-av-transmitter-w-hdmi-port.html">Skyzone TX-5D</a> and connect it to your PC's HDMI port. 
+I have not tried doing this, but it should work, at least in theory. 600mW output power
+might be an issue though (heat, power consumption, multipathing, causing interference in residential area)</p>
+<h3>diy</h3>
+<p>We can use quad components to build HDMI capable video link. </p>
+<p>All we need is any standard <strong>5.8GHz VTX</strong> and a <strong>HDMI to AV</strong> converter. Since most VTXes are designed
+for in flight operation (cooling) we should add <strong>a fan</strong> to prevent overheating. </p>
+<p>Specifically:</p>
+<ul>
+<li><a href="https://www.banggood.com/Onten-OTN-7336B-HDMI-to-AV-Audio-Converter-for-DVD-Laptop-PC-p-1331698.html">Mini HDMI2AV</a> ~9$</li>
+<li><a href="https://www.banggood.com/Eachine-VTX03-Super-Mini-5_8G-72CH-025mW50mw200mW-Switchable-FPV-Transmitter-p-1114206.html">Eachine VTX03</a> because I had it lying around and it can be switched down to 25mW, buy a <a href="https://www.banggood.com/Eachine-VTX01-Super-Mini-5_8G-40CH-25mW-FPV-Transmitter-p-1114203.html">VTX01</a> if it's cheaper. ~8$  </li>
+<li><a href="http://www.aliexpress.com/item/1-PC-5V-0-14A-40MM-4CM-40-40-10mm-4010-DC-CPU-Brushless-Cooling-Cooler/32698690076.html">40x40 5V Fan</a> not this exact one, but this size ~2$</li>
+</ul>
+<p>To perform this simple mod open the plastic shell of HDMI2AV. </p>
+<p>Strip some insulation from the end of black/red wire pairs of the VTX and the cooling fan
+(leave black/red/yellow alone for now). Join red wires (PWR) together and
+carefully solder them to this point on the PCB.</p>
+<p><img src="images/wireless-fpv/pcb-5v.png"></p>
+<p>As far as I can tell this is the only place where raw USB 5V is easily accessible.</p>
+<p>Black (GND) wires can be soldered to any GND terminals. USB port's case or any of its side legs are good choices. 
+They are far from other components and difficult to damage.</p>
+<p>Now cut off the connector from black/red/yellow bundle. Strip some insulation off yellow (video) and black (gnd) 
+wires and solder them to correct terminals. Bottom of the PCB is a good option, there's video signal on the top as well 
+(vertical metal prong in the AV connector) if you prefer.</p>
+<p><img src="images/wireless-fpv/video.jpg"></p>
+<h4>Test time</h4>
+<p>Plug in USB power. If you're using power-switchable VTX set it to <strong>25mW</strong>. Pick a channel (after closing the box
+access to the VTX will be limited).
+Now turn on your goggles and see if everything works. Your should see a test image like this one:</p>
+<p><img src="images/wireless-fpv/ok.png"></p>
+<h4>Finishing touches</h4>
+<p>Now take the top half of HDMI2AV and cut a hole in it for the fan (a knife and small pliers are good enough 
+for the job, use eye protection because the plastic breaks easily). Make the hole large enough for
+the air to freely <strong>blow into</strong> the case, but small enough that you can tape down the fan corners..</p>
+<p>Use double sided tape to mount the fan and the VTX as shown in the picture below.
+VTX is floating freely just below the fan, airflow is keeping it cool. </p>
+<p><img src="images/wireless-fpv/fan.jpg"></p>
+<p>DO NOT mount the VTX on the HDMI2AV PCB. Many of its components get very hot during operation, not to mention
+accidental short circuits.</p>
+<p>Now carefully close the lid taking care to not pinch any wires. </p>
+<p><img src="images/wireless-fpv/complete.jpg"></p>
+<h4>Connecting to the PC</h4>
+<p>Connect both HDMI and USB cables to your PC. 
+Either extend (you'll need to choose correct display in Liftoff) or duplicate you display.
+Choose reasonable resolution for HDMI2AV (1280x720 seems to work well)
+Start Liftoff and enjoy :)</p>
+<h2>Notes and disclaimers</h2>
+<ul>
+<li>You're broadcasting your screen unencrypted for all your neighbors to see.  Don't read private emails while VTX is enabled.</li>
+<li>I tested HDMI2AV + VTX continuously for over an hour and it seems to keep stable temperature.</li>
+<li>The same cannot be said about Fatshark HDOs + Pro58 receiver. The heat seems to spread and I prefer to let the goggles cool every 20 minutes or so. </li>
+</ul>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
+                    <div class="icons">
+                        <a href="https://twitter.com/wuub" target="_blank"><div class="icon-twitter icon"></div></a>
+                        <a href="https://github.com/wuub" target="_blank"><div class="icon-github icon"></div></a>
+                    </div>
+                    <p>© <script>document.write(moment().format('YYYY'));</script> wuub</p>
+                </footer>
+        </div>
+</body>
+</html>
