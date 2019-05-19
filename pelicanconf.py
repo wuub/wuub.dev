@@ -15,6 +15,9 @@ FIRST_NAME = "wuub"
 MENUITEMS = [("tags", "/tags")]
 LOGO = "logo.png"
 FAVICON = "wrench.png"
+TWITTER = 'https://twitter.com/wuub'
+GITHUB = 'https://github.com/wuub'
+GRAVATAR= 'https://en.gravatar.com/userimage/8800037/d6dd78792a9811a2f540a1328110a723.jpg?size=200'
 
 TIMEZONE = "Europe/Warsaw"
 DEFAULT_LANG = "en"
