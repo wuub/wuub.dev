@@ -36,13 +36,14 @@ DEFAULT_PAGINATION = 10
 PLUGIN_PATHS = ["pelican-plugins"]
 PLUGINS = [
     "assets",
-    "sitemap",
     "gravatar",
     "liquid_tags.img",
+    "liquid_tags.include_code",
     "liquid_tags.video",
     "liquid_tags.youtube",
-    "liquid_tags.include_code",
     "minchin.pelican.plugins.cname",
+    "optimize_images",
+    "sitemap",
 ]
 
 SITEMAP = {"format": "txt"}
