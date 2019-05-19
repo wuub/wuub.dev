@@ -15,6 +15,7 @@ pelican-youtube = "*"
 webassets = "*"
 black = "*"
 minchin-pelican-plugins-cname = "*"
+ghp-import = "*"
 
 [requires]
 python_version = "3.7"
