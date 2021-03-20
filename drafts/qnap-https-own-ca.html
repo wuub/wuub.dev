@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>wuub.dev blog</title>
+          <title>wuub.dev blog</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
         <!-- twitter card metadata -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://en.gravatar.com/userimage/8800037/d6dd78792a9811a2f540a1328110a723.jpg?size=200">
+<meta name="twitter:site" content="@wuub">
+<meta name="twitter:title" content="How to setup QNAP to correctly serve TLS certificate">
+<meta name="twitter:description" content="How to make QNAP server correct TLS cesrtificate">
         <!-- OG Tags -->
-<meta property="og:url" content="https://wuub.dev/tag/fpv"/>
-<meta property="og:title" content="wuub.dev blog | fpv" />
+<meta property="og:url" content="https://wuub.dev/drafts/qnap-https-own-ca.html"/>
+<meta property="og:title" content="wuub.dev blog | How to setup QNAP to correctly serve TLS certificate" />
+<meta property="og:description" content="How to make QNAP server correct TLS cesrtificate" />
         <!-- favicon -->
         <link rel="icon" type="image/png" href="https://wuub.dev/images/wrench.png">
         <!-- moment.js for date formatting -->
@@ -37,6 +43,12 @@
                     });
             };
         </script>
+
+    <meta name="description" content="How to make QNAP server correct TLS cesrtificate" />
+
+    <meta name="tags" content="qnap" />
+    <meta name="tags" content="https" />
+
 </head>
 <body>
     <div role="banner" id="masthead">
@@ -46,47 +58,51 @@
             <nav id="menu">
                 <ul>
                         <li><a href="/tags">tags</a></li>
-                            <li><a href="https://wuub.dev/category/posts.html">posts</a></li>
+                            <li class="active"><a href="https://wuub.dev/category/posts.html">posts</a></li>
                 </ul>
             </nav>
         </header>
     </div>
         <div class="page" role="main">
-<div class="page-title">
-    <h1>fpv</h1>
-</div>
-<div class="articles">
-        <ol>
-            <li>
-                <article>
-                    <footer>
-                         <p>
-                            <time datetime="2019-05-19 12:00:00+02:00">
-                                <script>document.write(moment('2019-05-19 12:00:00+02:00').format('LL'));</script>
-                            </time>
-                                    in <a href="https://wuub.dev/category/posts.html"><span class="category-tag">posts</span></a>
-                        </p>
-                    </footer>
-                    <header>
-                        <a href="https://wuub.dev/sim-wireless-setup.html">
-                            <h2>Completely wireless setup for your drone racing simulator</h2>
-                        </a>
-                    </header>
-                    <div class="summary">You want to play your favorite simulator using standard transmitter and goggles? USB and HDMI cables make everything feel heavy and constraint? This post is for you. </div>
-                    <div class="tags">
-                        <ul class="tags">
-                            <li><a href="https://wuub.dev/tag/fpv.html" class="tag">fpv</a></li>
-                            <li><a href="https://wuub.dev/tag/electronics.html" class="tag">electronics</a></li>
-                        </ul>
-                    </div>
-                    <a href="https://wuub.dev/sim-wireless-setup.html">
-                        <p class="readmore">Read more...</p>
-                    </a>
-                </article>
-            </li>
-        </ol>
-        
-</div>                <footer>
+  <div class="article" role="article">
+    <article>
+        <footer>
+            <a name="top"></a>
+            <p>
+              <time datetime=" 2021-03-20 23:24:00+01:00">
+                <script>document.write(moment('2021-03-20 23:24:00+01:00').format('LL'));</script>
+              </time>
+            </p>
+        </footer>
+        <header>
+          <h2>
+            How to setup QNAP to correctly serve TLS certificate
+          </h2>
+        </header>
+      <div class="content">
+         <h1>How to setup QNAP to correctly serve TLS certificate</h1>
+<ol>
+<li>Go to Control Panel -&gt; Security -&gt; Certificate and Private Key </li>
+<li>Clicke <code>Replace certificate</code></li>
+<li>Give your private key and site certiciate to te script.</li>
+<li>If you choose the Intermediate CA or nor apparently makes no difference.</li>
+<li><code>openssl s_client -showcerts -connect [your-qnap-address]:443</code></li>
+<li>Ovserve how only one certificate is provided. This means there's no valid crtificate chain, and you'll see a broken padlck.</li>
+<li>SSH to your Qnap NAS. <code>ssh admin@[your-qnap-address]</code></li>
+<li><code>cd /etc/stunnel</code></li>
+<li><code>vim stunnel.pem</code></li>
+<li>append the intermediate CA certificate at the end of this file. Make sure to watch your whitespaces and not pad with anythin extra.</li>
+<li>Run <code>/etc/init.d/stunnel.sh restart</code></li>
+<li>You should now be serving correct TLS certificate chain to the browser. </li>
+</ol>
+      </div>
+      <div class="back-to-top">
+          <a href="#top">back to top</a>
+      </div>
+    </article>
+  </div>
+<!-- end article -->
+                <footer>
                     <div class="icons">
                         <a href="https://twitter.com/wuub" target="_blank"><div class="icon-twitter icon"></div></a>
                         <a href="https://github.com/wuub" target="_blank"><div class="icon-github icon"></div></a>

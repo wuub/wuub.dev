@@ -6,7 +6,7 @@ https://wuub.dev/
 https://wuub.dev/archives.html
 https://wuub.dev/tags.html
 https://wuub.dev/categories.html
-https://wuub.dev/sim-wireless-setup
+https://wuub.dev/sim-wireless-setup.html
 https://wuub.dev/category/posts.html
 https://wuub.dev/tag/fpv.html
 https://wuub.dev/tag/electronics.html
